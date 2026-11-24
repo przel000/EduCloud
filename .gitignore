@@ -1,0 +1,37 @@
+# Secrets and local env
+.env
+*.pem
+*.key
+config.php
+archive/original/config.php
+archive/original/prometheus.yml
+archive/original/docker-compose.yml
+
+# Docker / runtime data (do not publish)
+minio-data/
+nextcloud_data/
+db_data/
+
+# Original SQL dumps contain personal data, hashes, and tokens
+nextcloud_backup.sql
+nextcloud_backups/
+archive/original/nextcloud_backup.sql
+archive/original/nextcloud_backups/
+
+# Logs and local recovery output
+logs/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary test artifacts
+tmp/
+test-restore/
+
+# Generated backups (may contain user data)
+backups/
+logs/

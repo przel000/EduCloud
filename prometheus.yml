@@ -1,0 +1,2 @@
+# Moved to prometheus/prometheus.yml (Compose mounts that file).
+# Original Oct 2025 file with hardcoded credentials is under archive/original/.

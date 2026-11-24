@@ -1,0 +1,33 @@
+<?php
+/**
+ * Example Nextcloud config shape recovered from EduCloud.
+ * Do not place real secrets here. Runtime config is generated inside the
+ * nextcloud_html Docker volume on first install.
+ */
+$CONFIG = array (
+  'htaccess.RewriteBase' => '/',
+  'memcache.local' => '\\OC\\Memcache\\APCu',
+  'memcache.distributed' => '\\OC\\Memcache\\Redis',
+  'memcache.locking' => '\\OC\\Memcache\\Redis',
+  'redis' =>
+  array (
+    'host' => 'redis',
+    'port' => 6379,
+  ),
+  'trusted_domains' =>
+  array (
+    0 => 'localhost',
+    1 => '127.0.0.1',
+    2 => 'localhost:8080',
+  ),
+  'datadirectory' => '/var/www/html/data',
+  'dbtype' => 'mysql',
+  'version' => '29.0.x',
+  'dbname' => 'nextcloud',
+  'dbhost' => 'nextcloud-db',
+  'dbtableprefix' => 'oc_',
+  'mysql.utf8mb4' => true,
+  'dbuser' => 'nextcloud',
+  'dbpassword' => 'SET_VIA_ENV',
+  'installed' => true,
+);
