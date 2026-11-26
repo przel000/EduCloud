@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  EduCloud container health-check and recovery simulation.
+  EduCloud container recovery and self-healing simulation.
 
 .DESCRIPTION
   Monitors Nextcloud app containers with Docker state checks AND HTTP probes.

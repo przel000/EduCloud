@@ -54,7 +54,7 @@ First boot can take 1–2 minutes while Nextcloud installs into the shared volum
 | Relational persistence | MariaDB with named volume |
 | Object storage | MinIO (S3-compatible), recovered `minio-data/` preserved |
 | Observability | Prometheus + cAdvisor |
-| Health & recovery | Docker healthchecks + `scripts/auto_scale.ps1` |
+| Health & recovery | Docker healthchecks + `scripts/recover_containers.ps1` |
 | Backup / restore | `scripts/backup-db.ps1`, isolated `restore-db.ps1` |
 
 ## Operations
@@ -80,7 +80,7 @@ First boot can take 1–2 minutes while Nextcloud installs into the shared volum
 ### Run recovery monitor
 
 ```powershell
-.\scripts\auto_scale.ps1
+.\scripts\recover_containers.ps1
 ```
 
 This script **recovers a fixed two-replica set**. It is not elastic autoscaling.

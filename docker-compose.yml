@@ -121,6 +121,10 @@ services:
   nextcloud-minio:
     # Official minio/minio pulls are currently unavailable in some regions;
     # cleanstart/minio is an S3-compatible MinIO build used for this lab.
+    # cleanstart/minio only publishes `latest`; pin by digest at deploy time:
+    #   docker pull cleanstart/minio:latest
+    #   docker inspect cleanstart/minio:latest --format '{{index .RepoDigests 0}}'
+    # Then replace `latest` with the sha256 digest for reproducible builds.
     image: cleanstart/minio:latest
     container_name: nextcloud-minio
     restart: unless-stopped
